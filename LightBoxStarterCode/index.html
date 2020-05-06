@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lightbox Exercise</title>
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="lightbox.js"></script>
+  </head>
+  <body>
+    <h1>My First Lightbox</h1>
+	
+	  <div id="main">
+    <img class="thumb" src="images/arabian-thumb.jpg" alt="arabian" onclick="displayLightBox('arabian.jpg','arabian')">
+    <img class="thumb" src="images/dog-thumb.jpg" alt="puppy" onclick="displayLightBox('dog.jpg','puppy')">
+    <img class="thumb" src="images/horse-thumb.jpg" alt="horse" onclick="displayLightBox('horse.jpg','horse')">
+    <img class="thumb" src="images/pinto-thumb.jpg" alt="pinto" onclick="displayLightBox('pinto.jpg','pinto')">
+    <img class="thumb" src="images/horseandpony-thumb.jpg" alt="horse and pony" onclick="displayLightBox('horseandpony.jpg','horseandpony')">
+    <img class="thumb" src="images/tb-thumb.jpg" alt="tb" onclick="displayLightBox('tb.jpg','tb')">
+
+
+
+
+
+    </div>
+
+    <div id="lightbox" class="hidden"> </div>
+   
+    <div id="positionBigImage">
+     
+      <div id="boundaryBigImage" class="hidden">
+        <img id="x" src="images/x.png" alt="close" onclick="displayLightBox('','')">
+        <img id="bigImage" src="images/arabian.jpg" alt="arabian">
+        </div>
+
+
+    </div>
+
+	
+  </body>
+</html>
