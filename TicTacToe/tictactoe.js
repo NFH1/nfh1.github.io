@@ -1,6 +1,41 @@
 let currentPlayer = "X";
 let gameStatus = ""; // "" - continue, "Tie","X wins", "O wins"
 let numTurns = 0;
+let idNames = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+
+//reset board and all variables
+function newGame() {
+	
+	//reset the board
+	for(var i = 0; i <idNames.length; i++) {
+		document.getElementById(idNames[i]).innerHTML = "";
+	} // for
+
+	numTurns = 0;
+	gameStatus = "";
+	currentPlayer = "X";
+
+	changeVisibility("controls");
+} // newGame
+
+function computerTakeTurn(){
+	let IdName = "";
+	
+
+	//choose random boxes until empty is found
+	do {
+		let rand = parseInt(Math.random()*9) + 1; //6-9
+		idName = idNames[rand-1];
+
+		// check if chosen box is empty
+		if (document.getElementById(idName).innerHTML == "") {
+			document.getElementById(idName).innerHTML = currentPlayer;
+			break;
+		} // if
+
+	}while(true);
+
+} // computerTakeTurn
 
 //take player turn
 function playerTakeTurn(e) {
@@ -8,15 +43,22 @@ function playerTakeTurn(e) {
 	if(e.innerHTML == ""){
 		e.innerHTML = currentPlayer;
 		checkGameStatus();
+	
+		// if game not over, computer
+		if (gameStatus == "") {
+			setTimeout(function() {
+					computerTakeTurn();
+					checkGameStatus();
+				}, 500
+			);
+		} //if
+
 	} else {
 		showLightBox("This box is taken","Please pick an empty box")
 		return;
 	} //else
 
-	//game is over
-	if(gameStatus != "") {
-		showLightBox(gameStatus, "game over");
-	}
+	
 
 
 } //playerTakeTurn
@@ -40,6 +82,11 @@ function checkGameStatus(){
 	
 	//switch current player
 	currentPlayer = (currentPlayer == "X" ? "O" : "X");
+
+	//game is over
+	if(gameStatus != "") {
+		setTimeout(function() {showLightBox(gameStatus, "game over");}, 300);
+	}
 
 } //checkGameStatus
 
@@ -125,7 +172,10 @@ function showLightBox(message, message2) {
 function continueGame() {
 	changeVisibility("lightbox");
 	changeVisibility("boundaryMessage");
+	
 	// if the game is over, show controls
-
-
+	if (gameStatus != "") {
+		changeVisibility("controls");
+	} // if
 } // continueGame
+
