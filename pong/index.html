@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+      
+    <link rel='icon' href='images/favicon.ico' type='images/x-icon'>
+    
+    <title>Classic Pong</title>
+    
+    <link rel="stylesheet" href="pong.css">  
+    
+  </head>
+  
+  <body>
+   <div id = "controlpanel">
+
+    <div onclick="startGame()" id="start" class="controls">Start Game</div>
+
+    <div onclick="stopGame()" id="stop" class="controls">Stop Game</div>
+
+    <div onclick="pauseGame()" id="pause" class="controls">Pause Game</div>
+
+    <div onclick="resumeGame()" id="resume" class="controls">Resume Game</div>
+
+   </div>
+   
+   <div id="header">
+      <h1 id="title">Classic Pong</h1>
+      <h2 id ="left"><span id="score2">0</span></h2>
+      <h2 id ="right"><span id="score1">0</span></h2>
+   </div>
+
+   <div id="gameBoard">
+    
+    <div id="paddle1" class="paddle"></div>
+
+    <div id="ball"></div>
+
+    <div id="paddle2" class="paddle"></div>
+
+   </div>
+
+   <!-- LightBox -->
+   <div id="lightbox" class="hidden"></div>
+
+    <div id="positionMessage">
+      <div id="boundaryMessage" class="hidden">
+        
+        <img src="images/x.png" id="x" alt ="close" onclick="continueGame()">
+        <h1 class="titletext" id ="message">&nbsp;</h1>
+        <p class="titletext" id="message2"></p>
+
+      </div> 
+    </div>
+
+   <script src="pong.js"></script>
+  </body>
+  
+</html>
