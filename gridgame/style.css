@@ -1,0 +1,129 @@
+body {
+	background-color: black;
+}
+
+#gameBoard {
+	border: 1px; solid black;
+	display: grid;
+	grid-template-columns: 32px 32px 32px 32px 32px 32px 32px 32px;
+	grid-template-rows: 32px 32px 32px 32px 32px 32px 32px 32px;
+	justify-content: center;
+	width: 600px;
+	height:600px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gameBoard div{
+	background-color: green;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gem {
+	background-image: url("images/gem.png");
+
+}
+
+.tree {
+	background-image: url("images/tree.png");
+	
+}
+
+.boulder {
+	background-image: url("images/boulder.png");
+	
+}
+
+.bridge {
+	background-image: url("images/bridge.png");
+	
+}
+
+.bridgeup {
+	background-image: url("images/bridgeup.png");
+	
+}
+
+.water {
+	background-image: url("images/water.png");
+	
+}
+
+.flag {
+	background-image: url("images/flag.png");
+	
+}
+
+.guyleft {
+	background-image: url("images/guyleft.png");
+	
+}
+
+.guyright {
+	background-image: url("images/guyright.png");
+	
+}
+
+.guyup {
+	background-image: url("images/guyup.png");
+	
+}
+
+.guydown {
+	background-image: url("images/guydown.png");
+	
+}
+
+.guygemleft {
+	background-image: url("images/guygemleft.png");
+	
+}
+
+.guygemright {
+	background-image: url("images/guygemright.png");
+	
+}
+
+.guygemup {
+	background-image: url("images/guygemup.png");
+	
+}
+
+.guygemdown {
+	background-image: url("images/guygemdown.png");
+	
+}
+
+.gembridgeleft {
+	background-image: url("images/gembridgeleft.png");
+}
+
+.gembridgeright {
+	background-image: url("images/gembridgeright.png");
+}
+
+.gembridgeup {
+	background-image: url("images/gembridgeup.png");
+}
+
+.gembridgedown {
+	background-image: url("images/gembridgedown.png");
+}
+
+.spiderl {
+	background-image: url("images/spiderl.png");
+}
+
+.spiderr {
+	background-image: url("images/spiderr.png");
+}
+
+.spideru {
+	background-image: url("images/spideru.png");
+}
+
+.spiderd {
+	background-image: url("images/spiderd.png");
+}
